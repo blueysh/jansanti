@@ -67,8 +67,8 @@ export default function Home() {
       <section className="px-20 py-5 max-w-[1200px] mx-auto">
         <h2 className="text-2xl">Highlights</h2>
         <span className="opacity-50 text-xl">(scroll left and right)</span>
-        <div className="flex flex-row space-x-2 overflow-x-scroll">
-          <Card>
+        <div className="flex flex-row space-x-2 overflow-x-scroll snap-x snap-mandatory">
+          <Card className="snap-center">
             <h5 className="text-center text-2xl">
               National Hispanic Recognition Program Scholar
             </h5>
@@ -77,7 +77,7 @@ export default function Home() {
               Awarded August 1, 2023 by the College Board
             </p>
           </Card>
-          <Card>
+          <Card className="snap-center">
             <h5 className="text-center text-2xl">
               Congressional App Challenge Participant
             </h5>
@@ -86,14 +86,21 @@ export default function Home() {
               Participated during the 2023-2024 School Year
             </p>
           </Card>
-          <Card>
+          <Card className="snap-center">
+            <h5 className="text-center text-2xl">
+              Future Business Leaders of America (FBLA) Member
+            </h5>
+            <hr className="my-2" />
+            <p className="my-auto text-center">2-year Member in 2024</p>
+          </Card>
+          <Card className="snap-center">
             <h5 className="text-center text-2xl">
               Pennsylvania House of Representatives Leadership Award
             </h5>
             <hr className="my-2" />
             <p className="my-auto text-center">Awarded in 2018</p>
           </Card>
-          <Card>
+          <Card className="snap-center">
             <h5 className="text-center text-2xl">
               President&apos;s Award for Education Excellence
             </h5>
