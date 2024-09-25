@@ -1,115 +1,107 @@
-import Image from "next/image";
-import localFont from "next/font/local";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { Button, LinkButton } from "@/components/button";
+import Card from "@/components/card";
+import Header from "@/components/header";
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/pages/index.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="tracking-tighter">
+      <Header />
+      <section className="p-20 bg-neutral-100 dark:bg-neutral-900">
+        <h1 className="text-5xl mb-6 font-semibold tracking-tighter max-w-[500px]">
+          Designing intuitively so others work productively.
+        </h1>
+        <LinkButton href="https://docs.google.com/document/d/1QEXFCTEdLbsXSvgLlJ6LAgW--SwMtjUYpzziAngL5nw/edit#heading=h.50pkkh1na2mq">
+          See Resume{" "}
+          <span className="font-sans absolute ml-1 group-hover:translate-x-1 transition-all duration-300">
+            →
+          </span>
+          <span className="font-sans opacity-0">↗</span>
+        </LinkButton>
+      </section>
+      <section className="px-20 pt-10 pb-5 max-w-[1200px] mx-auto">
+        <div className="border-l-2 border-neutral-500 pl-5">
+          <h2 className="text-3xl font-bold">My name is Jan Santiago.</h2>
+          <h3 className="text-xl font-semibold">CS Student, Class of 2025</h3>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <p className="text-lg my-2 max-w-[700px]">
+          I&apos;m a Puerto Rican full-stack developer and musician living in
+          the United States. I&apos;m currently a student at Newton College &
+          Career Academy in the Computer Science pathway. My goal is to build
+          valuable experiences for people through intuitive software.
+        </p>
+        <p className="text-lg my-2 max-w-[700px]">
+          For frontend, I use Next.js and Tailwind. For backend, I typically use
+          Spring with Java. I&apos;m always looking to learn new things and
+          improve my skills.
+        </p>
+        <p className="text-lg my-2 max-w-[700px]">
+          Outside of that, I work at Chick-fil-A as a Team Captain. I&apos;ve
+          been working there for 2 years, and have learned a lot about
+          leadership and teamwork. For fun, I like to play video games, spend
+          time with friends, and listen to music (I play piano, too).
+        </p>
+      </section>
+      <section className="px-20 py-5 max-w-[1200px] mx-auto">
+        <h2 className="text-2xl">Contact</h2>
+        <p className="text-lg my-2">
+          <a className="underline" href="mailto:hi@jansanti.me">
+            Email
+          </a>{" "}
+          |{" "}
+          <a className="underline" href="https://github.com/blueysh">
+            GitHub
+          </a>{" "}
+          |{" "}
+          <a
+            className="underline"
+            href="https://discord.com/users/594576995090956313"
+          >
+            Discord
+          </a>{" "}
+          |{" "}
+          <a className="underline" href="https://x.com/blueysh_">
+            X
+          </a>
+        </p>
+      </section>
+      <section className="px-20 py-5 max-w-[1200px] mx-auto">
+        <h2 className="text-2xl">Highlights</h2>
+        <span className="opacity-50 text-xl">(scroll left and right)</span>
+        <div className="flex flex-row space-x-2 overflow-x-scroll">
+          <Card>
+            <h5 className="text-center text-2xl">
+              National Hispanic Recognition Program Scholar
+            </h5>
+            <hr className="my-2" />
+            <p className="my-auto text-center">
+              Awarded August 1, 2023 by the College Board
+            </p>
+          </Card>
+          <Card>
+            <h5 className="text-center text-2xl">
+              Congressional App Challenge Participant
+            </h5>
+            <hr className="my-2" />
+            <p className="my-auto text-center">
+              Participated during the 2023-2024 School Year
+            </p>
+          </Card>
+          <Card>
+            <h5 className="text-center text-2xl">
+              Pennsylvania House of Representatives Leadership Award
+            </h5>
+            <hr className="my-2" />
+            <p className="my-auto text-center">Awarded in 2018</p>
+          </Card>
+          <Card>
+            <h5 className="text-center text-2xl">
+              President&apos;s Award for Education Excellence
+            </h5>
+            <hr className="my-2" />
+            <p className="my-auto text-center">Awarded in 2018</p>
+          </Card>
+        </div>
+      </section>
+    </main>
   );
 }
